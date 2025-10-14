@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            margin: 5px 0;
+            display: inline-block;
+        }
+        img {
+            width: 100px;
+            margin: 10px 0;
+        }
+        #desc {
+            background-color: lightgray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>1. We can change the content of HTML.</p>
+    <h1 id="title">Hello world</h1>
+    <button onclick="changeTitle()">Change the content of H1</button>
+
+    <p>2. We can change the HTML attribute.</p>
+    <img src="./off.png" alt="off" id="bulb">
+    <br>
+    <button onclick="toggleBulb(true)">Turn ON</button>
+    <button onclick="toggleBulb(false)">Turn OFF</button>
+
+    <p>3. We can change the CSS.</p>
+    <div id="desc">Lorem, ipsum.</div>
+    <button onclick="changeBackground()">Change Background</button>
+
+    <p>4. We can hide the HTML element.</p>
+    <h3 id="title3">Lorem, ipsum.</h3>
+    <button onclick="hideElement('title3')">Hide Element</button>
+
+    <p>5. We can show the HTML element.</p>
+    <h2 id="heading_2" style="display: none;">Heading 2</h2>
+    <button onclick="showElement('heading_2')">Show Element</button>
+
+    <script>
+        function changeTitle() {
+            document.getElementById('title').innerText = 'Text changed using JS';
+        }
+
+        function toggleBulb(isOn) {
+            const bulb = document.getElementById('bulb');
+            bulb.src = isOn ? './on.jpg' : './off.png';
+        }
+
+        function changeBackground() {
+            document.getElementById('desc').style.backgroundColor = 'green';
+        }
+
+        function hideElement(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        function showElement(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>
