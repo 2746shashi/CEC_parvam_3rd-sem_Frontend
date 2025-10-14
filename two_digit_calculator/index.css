@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a0eb16;
+    background: linear-gradient(90deg, rgb(247, 211, 7) 0%, rgb(161, 13, 117) 35%, rgb(221, 15, 50) 100%);
+}
+
+.card {
+    padding: 10px 20px;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.title {
+    font-size: 2rem;
+    /* 1rem = 16px*/
+}
+
+.card-header {
+    background-color: rgb(237, 82, 167);
+}
